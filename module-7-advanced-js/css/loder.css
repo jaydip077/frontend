@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#loader{
+    width:200px;
+    height: 200px;
+    position: absolute;
+    background: url('https://media1.tenor.com/m/WX_LDjYUrMsAAAAC/loading.gif') no-repeat;
+    background-size: 400px 400px;
+    background-position: center;
+    left: 40%;
+    top:20%;
+}
+
+#main{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: 5%;
+    display: none;
+}
+
+#main h1{
+    font-size: 85px;
+    text-align: center;
+    color: blue;
+    transition: 2s ease all;    
+}

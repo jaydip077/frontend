@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+ body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Hide Scrollbar */
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .text-brand-orange { color: #FC8019; }
+        .bg-brand-orange { background-color: #FC8019; }
