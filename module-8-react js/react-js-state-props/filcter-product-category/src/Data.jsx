@@ -1,0 +1,68 @@
+const Data = [
+  {
+    id:1,
+    Name:"Polo",
+    Category:"T-Shirt",
+    Price:"$100",
+    Photo:"https://in.benetton.com/cdn/shop/files/Benetton_25AI_25A3089B3329I_100_5CBenetton_25AI_25A3089B3329I_100_FS_960x_crop_center.jpg?v=1753938398"
+  },
+ {
+    id:2,
+    Name:"Men Shorts",
+    Category:"Shorts",
+    Price:"$50",
+    Photo:"https://m.media-amazon.com/images/I/71qJNrZhd1L._SY879_.jpg"
+ },
+ {
+    id:3,
+    Name:"Jeans",
+    Category:"Pants",
+    Price:"$80",
+    Photo:"https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/9/f/9f210511311674004_1.jpg?rnd=20200526195200&tr=w-1080"
+ 
+ },
+ {
+    id:4,
+    Name:"Shirt",
+    Category:"Shirt",
+    Price:"$120",
+    Photo:"https://m.media-amazon.com/images/I/71qJNrZhd1L._SY879_.jpg"
+ },
+ {
+    id:5,
+    Name:"Sneakers",
+    Category:"Shoes",
+    Price:"$90",
+    Photo:"https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/3/13076c7YADIAA00033392_1.jpg?rnd=20200526195200&tr=w-1080"
+ },
+ {
+    id:6,
+    Name:"Jacket",
+    Category:"Outerwear",
+    Price:"$150",
+    Photo:"https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/3/13076c7YADIAA00033392_1.jpg?rnd=20200526195200&tr=w-1080"
+ },
+ {
+    id:7,
+    Name:"Cap",
+    Category:"Accessories",
+    Price:"$30",
+    Photo:"https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/3/13076c7YADIAA00033392_1.jpg?rnd=20200526195200&tr=w-1080"
+ },
+ {
+    id:8,
+    Name:"Sunglasses",
+    Category:"Accessories",
+    Price:"$70",
+    Photo:"https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/3/13076c7YADIAA00033392_1.jpg?rnd=20200526195200&tr=w-1080"
+ },
+ {
+    id:9,
+    Name:"Watch",
+    Category:"Accessories",
+    Price:"$200",
+    Photo:"https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/3/13076c7YADIAA00033392_1.jpg?rnd=20200526195200&tr=w-1080"
+ }
+];
+
+export default Data;

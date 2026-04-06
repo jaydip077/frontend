@@ -1,0 +1,37 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
+  background-color: aqua;
+}
+
+.ap{
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  border: 5px solid white;
+  margin: 20px auto;
+  background-color: black;
+  margin-top: 15%;
+  
+}
+
+.ap h2{
+  text-align: left;
+  color: red;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ap:hover{
+  width: 70%;
+  height: auto;
+  background-color: white;
+  color: black;
+  transition: all 0.5s ease-in-out;
+  border: 5px solid black;
+}
+.ap:hover h2{
+  color: black;
+  transition: all 0.5s ease-in-out;
+}

@@ -1,0 +1,32 @@
+.demo{
+    width: 60%;
+    height: auto;
+    background-color: #00d9ff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 20%;
+    margin-top: 10%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
+    
+}
+
+.an{
+    
+    color: white;
+    font-size: 20px;
+
+}
+
+.an img{
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+    
+}
+
+.an img:hover{
+    width: 100%;
+    height: auto;
+    transition: 0.9s ease ;
+}
