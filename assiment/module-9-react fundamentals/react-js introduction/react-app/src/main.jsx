@@ -1,12 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-// import Cardapp from './Cardapp'
-import Contact from './contact-us'
+import Reactapp from './React-app'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <Cardapp /> */}
-    <Contact />
+    <Reactapp />
   </StrictMode>,
 )
