@@ -7,7 +7,6 @@
 | Syntax           |HTML-like syntax  |JavaScript syntax|
 |Readability      |Easy to read and write UI code   |Less readble for UI  |
 |Usage    | Used in React for UI rendering  | General programming |
-
 | Compilation    | Need Babel to convert into JS   | Runs directly on browser |
 | Example   | `<h1>Helo</h1>`   | `React.createElement("h1", null, "Hello")` |
 

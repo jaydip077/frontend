@@ -1,8 +1,8 @@
 ## What is React.js? How is it different from other JavaScript frameworks and libraries?
 
-React.js is a JavaScript library used to build user interfaces.It maintained by Facebook.
+React.js is a JavaScript library used to build user interfaces.It maintained by Meta .
 
-The main purpose of react is to make ut painless to create interactive user interfaces.you design simpke views for each state in ypur application,and react will efficiently update and render them.
+The main purpose of react is to make it painless to create interactive user interfaces.you design simple views for each state in ypur application,and react will efficiently update and render them.
 
  ## How is it difference from other javascript framework and libraries?
  # 1.React is a library:

@@ -9,7 +9,7 @@
 
 
 ### 1.Component-based architecture:
- Ract applications are built using **components**, which are reusable and independent pieces od UI.
+ Ract applications are built using **components**, which are reusable and independent pieces of UI.
 
  #### Key Points:
  - Each component represent a part of the UI(e.g. ,navbar, button, card).
