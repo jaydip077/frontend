@@ -90,7 +90,7 @@ export default function Headerapp() {
     <div className="flex items-center gap-3 sm:gap-6">
       <button
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2"
+        className="hidden sm:flex items-center gap-3 sm:gap-6"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -108,11 +108,11 @@ export default function Headerapp() {
           <circle cx={12} cy={10} r={3} />
           <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
         </svg>
-        <span className=' sm:hidden md:block lg:block' >Sign in</span>
+        <span className='sm:hidden md:block lg:block' >Sign in</span>
       </button>
       <button
            onClick={() => setIsCartOpen(true)}
-        className="flex items-center gap-3 sm:gap-6 "
+        className="hidden sm:flex items-center gap-3 sm:gap-6"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ export default function Headerapp() {
           <path d="M3 6h18" />
           <path d="M16 10a4 4 0 0 1-8 0" />
         </svg>
-        <span className=" sm:hidden md:block lg:block">My Cart</span>
+        <span className="sm:hidden md:block lg:block">My Cart</span>
       </button>
     </div>
      <div className='flex justify-center md:hidden lg:hidden xl:hidden w-6 h-6 cursor-pointer'>
