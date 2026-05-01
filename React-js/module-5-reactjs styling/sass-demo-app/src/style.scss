@@ -1,0 +1,36 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.app{
+    @include center;
+    height: 50vh;
+    background-color: $primary-color;
+    padding: $padding;
+}
+.box1{
+     width: 100px;
+    height: 100px;
+    background-color: $success-color;
+    margin: $margin;
+    padding: $padding;
+}
+.box2{
+     width: 100px;
+    height: 100px;
+   background-color: $success-color;
+    margin: $margin;
+    padding: $padding;
+}
+.box3{
+     width: 100px;
+    height: 100px;
+   background-color: $success-color;
+    margin: $margin;
+    padding: $padding;
+}

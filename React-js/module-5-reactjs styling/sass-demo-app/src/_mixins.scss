@@ -1,0 +1,7 @@
+// mixins is used to reuse css proporities one block to anither block
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
