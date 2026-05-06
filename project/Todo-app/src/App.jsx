@@ -1,107 +1,65 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
   const [task, setTask] = useState("");
-  const [todos, setTodos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [editindex, setEditindex] = useState(null);
-  const [edittext, setEdittext] = useState("");
-// for adding task
-  const addTask = () => {
+
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem("tasks");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  const handleAdd = () => {
     if (task.trim() === "") return;
 
-    setTodos([...todos, { text: task, completed: false }]);
+    setTasks([...tasks, { text: task, completed: false }]);
     setTask("");
   };
 
-  // for delete task
-  const deleteTask = (index) => {
-    const newTodos = todos.filter((_, i) => i !== index);
-    setTodos(newTodos);
-  };
-// for toggle task
-  const toggleComplete = (index) => {
-    const newTodos = [...todos];
-    newTodos[index].completed = !newTodos[index].completed;
-    setTodos(newTodos);
-  };
-
-  // for local storage
-useEffect(() => {
-  const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-  setTodos(savedTodos);
-  setLoading(false);
-}, []);
-  
+  // Only for saving
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
-
-// for edit task
-const startEdit = (index) => { 
-  setEditindex(index);
-  setEdittext(todos[index].text);
-};
-
-const saveEdit = () => {
-  if (edittext.trim() === "") return;
-
-  const newTodos = [...todos];
-  newTodos[editindex].text = edittext;
-  setTodos(newTodos);
-  setEditindex(null);
-  setEdittext("");
-};
-
-   if (loading) {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
   return (
-    <div className="text-center mt-10 text-xl font-bold">
-      Loading...
-    </div>
-  );
-}
-
-  return (
-    <div className="w-1/2 mx-auto bg-blue-300 p-5 rounded mt-9">
-      <h1 className="text-xl font-bold mb-3 text-center">Todo App</h1>
-      <hr></hr>
+    <div className=" p-5 w-1/2 my-6 mx-auto bg-blue-300">
+      <h1 className="text-center decoration-1 text-2xl my-2">Todo List</h1>
 
       <input
         type="text"
-        placeholder="Enter Task"
+        placeholder="Enter Task" 
         value={task}
-        onChange={(e) => setTask(e.target.value)}
-        className="p-2 mr-2 border-2 mt-1"
+        onChange={(e) => setTask(e.target.value)  } className="border-2 border-gray-800 mx-auto p-2 w-full mb-4"
       />
 
-      <button onClick={addTask} className="bg-black text-white px-3 py-1 " >
-        Add
-      </button>
+      <button onClick={handleAdd} className="bg-green-500 px-8 border-2 border-gray-400 text-white rounded-2xl mx-auto ms-60 ">Add</button>
 
-      <ul className="mt-4">
-        {todos.map((item, index) => (
-          <li key={index} className="flex justify-between items-center mb-2">
+      <ul>
+        {tasks.map((t, index) => (
+          <li key={index}>
             <span
-              onClick={() => toggleComplete(index)}
-              className={`cursor-pointer ${
-                item.completed ? "line-through" : ""
-              }`}
+              onClick={() => {
+                const updated = [...tasks];
+                updated[index].completed = !updated[index].completed;
+                setTasks(updated);   // ✅ fixed
+              }}
+              style={{
+                textDecoration: t.completed ? "line-through" : "none",
+                cursor: "pointer",
+              }}
             >
-              {item.text}
+              {t.text}
             </span>
 
-              <button onClick>Edit</button>
             <button
-              onClick={() => deleteTask(index)}
-              className="bg-red-500 text-white px-2 py-1"
-            >
+              onClick={() => {
+                const newTasks = tasks.filter((_, i) => i !== index);
+                setTasks(newTasks);
+              }}
+            className="bg-red-500 px-2 border-2 border-gray-400 text-white rounded-2xl mx-4">
               Delete
             </button>
           </li>
         ))}
       </ul>
-      
     </div>
   );
- 
 }

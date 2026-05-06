@@ -1,0 +1,186 @@
+// Login Page Mixins
+
+// Mixin for login container
+@mixin login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: $background-secondary;
+}
+
+// Mixin for login heading
+@mixin login-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $text-primary;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+// Mixin for login form wrapper
+@mixin login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: $background-primary;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// Mixin for form group
+@mixin form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+// Mixin for input field
+@mixin login-input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: $background-secondary;
+  color: $text-primary;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $background-primary;
+  }
+
+  &::placeholder {
+    color: rgba($text-primary, 0.6);
+  }
+}
+
+// Mixin for label
+@mixin login-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $text-secondary;
+  margin-bottom: 0.5rem;
+}
+
+// Mixin for button
+@mixin login-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $text-primary;
+  background-color: $background-secondary;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: lighten($background-secondary, 10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+// Mixin for link
+@mixin login-link {
+  color: $text-secondary;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: lighten($text-secondary, 20%);
+    text-decoration: underline;
+  }
+}
+
+// Mixin for error message
+@mixin login-error {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(#e74c3c, 0.1);
+  border-radius: 4px;
+}
+
+// Mixin for remember me checkbox
+@mixin login-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: $background-primary;
+    cursor: pointer;
+  }
+
+  label {
+    font-size: 0.875rem;
+    color: $text-secondary;
+    cursor: pointer;
+  }
+}
+
+// Composite mixin for complete login card
+@mixin login-card {
+  @include login-container;
+
+  .login-card {
+    @include login-form;
+  }
+
+  h2 {
+    @include login-heading;
+  }
+
+  .form-group {
+    @include form-group;
+
+    label {
+      @include login-label;
+    }
+
+    input {
+      @include login-input-field;
+    }
+  }
+
+  .checkbox-group {
+    @include login-checkbox;
+  }
+
+  button {
+    @include login-button;
+  }
+
+  .error-message {
+    @include login-error;
+  }
+
+  .login-links {
+    margin-top: 1rem;
+    text-align: center;
+
+    a {
+      @include login-link;
+    }
+  }
+}

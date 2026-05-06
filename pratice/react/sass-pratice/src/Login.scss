@@ -1,0 +1,67 @@
+@import 'variables';
+@import 'mixins';
+
+.login-page {
+  @include login-container;
+}
+
+.login-card {
+  @include login-form;
+
+  h2 {
+    @include login-heading;
+  }
+}
+
+.form-group {
+  @include form-group;
+
+  label {
+    @include login-label;
+  }
+
+  input {
+    @include login-input-field;
+
+    &.error {
+      border-color: #e74c3c;
+      
+      &:focus {
+        border-color: #e74c3c;
+      }
+    }
+  }
+}
+
+.field-error {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.checkbox-group {
+  @include login-checkbox;
+}
+
+button {
+  @include login-button;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.error-message {
+  @include login-error;
+}
+
+.login-links {
+  margin-top: 1rem;
+  text-align: center;
+
+  a {
+    @include login-link;
+  }
+}
