@@ -1,0 +1,72 @@
+{
+    "customer": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "email": "jane.smith@example.com"
+        }],
+
+        "category": [
+            {
+                "id": 1,
+                "name": "Electronics"
+            },
+            {
+                "id": 2,
+                "name": "Books"
+            }
+        ],
+        "product": [
+            {
+                "id": 1,
+                "name": "Smartphone",
+                "price": 699.99,
+                "categoryId": 1,
+                "image": "https://example.com/images/smartphone.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Laptop",
+                "price": 1299.99,
+                "categoryId": 1,
+                "image": "https://example.com/images/laptop.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Novel",
+                "price": 19.99,
+                "categoryId": 2,    
+                "image": "https://example.com/images/novel.jpg"
+            }
+        ],
+        "order": [
+            {
+                "id": 1,
+                "customerId": 1,
+                "productIds": [1, 3],
+                "total": 719.98
+            },
+            {
+                "id": 2,
+                "customerId": 2,
+                "productIds": [2],
+                "total": 1299.99
+            },
+            {
+                "id": 3,
+                "customerId": 1,
+                "productIds": [2, 3],
+                "total": 1319.98
+            }
+        ]
+
+        
+
+        
+
+}
